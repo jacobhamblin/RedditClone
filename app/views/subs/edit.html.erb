@@ -1,0 +1,10 @@
+<h1>Edit "<%= Sub.find(params[:id]).title %>"</h1>
+
+<%= render '/shared/errors' %>
+
+<form action="<%= sub_url(@sub) %>" method="POST">
+  <input type="hidden" name="_method" value="PATCH">
+
+<%= render 'form', sub: @sub %>
+
+</form>

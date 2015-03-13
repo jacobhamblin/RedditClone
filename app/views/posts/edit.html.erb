@@ -1,0 +1,10 @@
+<h1>Edit Post</h1>
+
+<%= render '/shared/errors' %>
+
+<form action="<%= sub_post_url(sub_id: @post.sub_id, id: @post.id) %>" method="POST">
+  <input type="hidden" name="_method" value="PATCH">
+
+<%= render 'form', post: @post %>
+
+</form>

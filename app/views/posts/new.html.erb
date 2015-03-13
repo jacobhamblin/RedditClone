@@ -1,0 +1,9 @@
+<h1>Create Post</h1>
+
+<%= render '/shared/errors' %>
+
+<form action="<%= sub_posts_url %>" method="POST">
+
+<%= render 'form', post: @post %>
+
+</form>

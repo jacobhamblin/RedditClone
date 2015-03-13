@@ -1,0 +1,6 @@
+<h1><%= @sub.title %></h1>
+<h3><%= @sub.description %></h3><br>
+
+<% @sub.posts.each do |post| %>
+<p><strong><%= post.title %></strong></p><p><%= post.content %></p><br>
+<% end %>
