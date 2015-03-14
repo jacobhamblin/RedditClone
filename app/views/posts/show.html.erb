@@ -1,3 +1,11 @@
 <h1><%= @post.title %></h1>
 
 <%= @post.to_json %>
+
+<p>
+<%= link_to "Create Comment", new_post_comment_url(post_id: @post.id) %>
+<p>
+
+<% @post.comments.each do |comment| %>
+  <%= comment.content %><br>
+<% end %>

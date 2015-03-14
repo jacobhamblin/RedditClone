@@ -1,0 +1,17 @@
+<h1>comment</h1>
+<form action="<%= comments_url %>" method="POST">
+
+  <%= csrf_input %>
+  
+  <input type="hidden" name="comment[post_id]" value="<%= params[:post_id] %>">
+
+  <label for="content">Content</label>
+  <textarea name="comment[content]" id="content"><%= @comment.content %></textarea>
+            <br>
+
+
+
+
+
+<input type="submit" value="Submit">
+</form>

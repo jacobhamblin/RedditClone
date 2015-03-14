@@ -18,4 +18,5 @@ class Post < ActiveRecord::Base
   belongs_to :author, class_name: 'User'
   has_many :postings, class_name: 'PostSub', dependent: :destroy
   has_many :subs, through: :postings, source: :sub
+  has_many :comments, foreign_key: :post_id
 end
