@@ -1,0 +1,6 @@
+<% Sub.all.each do |sub| %>
+  <% checked = (post.sub_ids.include?(sub.id) ? "checked" : "") %>
+
+  <input type="checkbox" name="post[sub_ids][]"
+   value="<%= sub.id %>" <%= checked %>> <%= sub.title %><br>
+<% end %>

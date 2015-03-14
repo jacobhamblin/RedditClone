@@ -16,5 +16,6 @@ class Sub < ActiveRecord::Base
 
   belongs_to :moderator, class_name: 'User'
 
-  has_many :posts
+  has_many :posts, through: :postings, source: :post
+  has_many :postings, class_name: 'PostSub', dependent: :destroy
 end

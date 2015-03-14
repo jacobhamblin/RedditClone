@@ -1,12 +1,10 @@
 # == Schema Information
 #
-# Table name: posts
+# Table name: post_subs
 #
 #  id         :integer          not null, primary key
-#  title      :string           not null
-#  url        :string
-#  content    :text
-#  author_id  :integer          not null
+#  sub_id     :integer          not null
+#  post_id    :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -14,15 +12,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  url: MyString
-  content: MyText
   sub_id: 1
-  author_id: 1
+  post_id: 1
 
 two:
-  title: MyString
-  url: MyString
-  content: MyText
   sub_id: 1
-  author_id: 1
+  post_id: 1
